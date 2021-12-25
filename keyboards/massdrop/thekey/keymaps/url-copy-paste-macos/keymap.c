@@ -15,13 +15,15 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "keymap_german.h"
+#include "sendstring_german.h"
 
 enum custom_keycodes {
     TK_URL = SAFE_RANGE,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT(TK_URL, C(KC_C), C(KC_V)),
+    [0] = LAYOUT(TK_URL, G(KC_C), G(KC_V)),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
