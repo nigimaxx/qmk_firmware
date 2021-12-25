@@ -31,7 +31,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case TK_URL:
             if (record->event.pressed) {
                 // when keycode TK_URL is pressed
-                SEND_STRING("https://stackoverflow.com/\n");
+                rgblight_increase_hue();
+                tap_code16(G(A(KC_F12)));
+                // SEND_STRING("https://stackoverflow.com/\n");
             }
             break;
         default:
